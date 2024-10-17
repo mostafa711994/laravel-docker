@@ -27,7 +27,7 @@ and run php artisan migrate
 
 Note: When run it at first time will take a long time.but after that it will be fast.because Images will be created.
 
-Enjoy!🎉🎉🎉
+Enjoy!🎉
 
 
 ``` 
