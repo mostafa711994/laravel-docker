@@ -16,13 +16,23 @@ Clone your project repository to your local machine:
 
 ```bash
 cd laravel-docker
+docker compose up -build
+```
+```bash
+#after you got output like this NOTICE: ready to handle connections,run this command
 docker compose up -d
+```
+```bash
 connect to database with host database
+```
+```bash
 add domain to hosts file
 update nginx config with domain
+```
+```bash
 ## to enter the container
 docker exec -it docker-app-dev bash
-and run php artisan migrate
+```
 
 
 Note: When run it at first time will take a long time.but after that it will be fast.because Images will be created.
@@ -30,5 +40,6 @@ Note: When run it at first time will take a long time.but after that it will be 
 Enjoy!🎉
 
 
-``` 
+
+
 
