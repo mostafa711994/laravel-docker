@@ -9,7 +9,9 @@ if [ ! -f .env ]; then
 fi
 
 php artisan migrate
-php artisan key:generate
+if ! grep -q '^APP_KEY=' .env || [ -z "$(grep '^APP_KEY=' .env | cut -d '=' -f2)" ]; then
+    php artisan key:generate
+fi
 php artisan optimize:clear
 
 exec php-fpm
