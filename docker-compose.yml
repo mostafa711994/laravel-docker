@@ -25,6 +25,8 @@ services:
             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
         depends_on:
             - docker-app
+        volumes_from:
+            - teksa-app
 
     database:
         image: mysql:8.0
