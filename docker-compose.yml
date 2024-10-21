@@ -12,6 +12,9 @@ services:
             - ./storage:/var/www/html/storage
         ports:
             - "9000:9000"
+        command: >
+            sh -c "if [ ! -f .env ]; then cp .env.example .env; fi && php-fpm"
+
 
 
     nginx:
@@ -34,6 +37,7 @@ services:
             MYSQL_PASSWORD: ${DB_PASSWORD}
         volumes:
             - mysql_data:/var/lib/mysql
-
+        depends_on:
+            - docker-app
 volumes:
     mysql_data: ~

@@ -16,7 +16,7 @@ Clone your project repository to your local machine:
 
 ```bash
 cd laravel-docker
-docker compose up -build
+./Docker/start.sh
 ```
 ```bash
 #after you got output like this NOTICE: ready to handle connections,run this command
